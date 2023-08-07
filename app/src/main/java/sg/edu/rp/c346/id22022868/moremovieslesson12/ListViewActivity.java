@@ -74,24 +74,73 @@ public class ListViewActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
-                    case 0: //G
+                    case 0: //all
+                        movies.clear();
+
+                        movies.addAll(db.getMovieDetails());
+                        adapter.notifyDataSetChanged();
+                        break;
+                    case 1: //G
                         keyword = "G";
+                        movies.clear();
+
+                        movies.addAll(db.filterRating(keyword));
+
+                        //songs = rated5;
+
+                        adapter.notifyDataSetChanged();
                         break;
-                    case 1: //PG
+                    case 2: //PG
                         keyword = "PG";
+                        movies.clear();
+
+                        movies.addAll(db.filterRating(keyword));
+
+                        //songs = rated5;
+
+                        adapter.notifyDataSetChanged();
                         break;
-                    case 2: //PG13
+                    case 3: //PG13
                         keyword = "PG13";
+                        movies.clear();
+
+                        movies.addAll(db.filterRating(keyword));
+
+                        //songs = rated5;
+
+                        adapter.notifyDataSetChanged();
                         break;
-                    case 3: //NC16
+                    case 4: //NC16
                         keyword = "NC16";
+                        movies.clear();
+
+                        movies.addAll(db.filterRating(keyword));
+
+                        //songs = rated5;
+
+                        adapter.notifyDataSetChanged();
                         break;
-                    case 4: //M18
+                    case 5: //M18
                         keyword = "M18";
+                        movies.clear();
+
+                        movies.addAll(db.filterRating(keyword));
+
+                        //songs = rated5;
+
+                        adapter.notifyDataSetChanged();
                         break;
-                    case 5: //R21
+                    case 6: //R21
                         keyword = "R21";
+                        movies.clear();
+
+                        movies.addAll(db.filterRating(keyword));
+
+                        //songs = rated5;
+
+                        adapter.notifyDataSetChanged();
                         break;
+
                 }
             }
 
@@ -108,7 +157,7 @@ public class ListViewActivity extends AppCompatActivity {
 
                 movies.clear();
 
-                movies.addAll(db.filterRating(keyword));
+                movies.addAll(db.filterRating("PG13"));
 
                 //songs = rated5;
 

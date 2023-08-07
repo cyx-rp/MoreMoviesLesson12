@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -58,6 +59,43 @@ public class EditActivity extends AppCompatActivity {
         etGenre.setText(genre);
         etYear.setText(Integer.toString(year));
         spinnerRating.setSelection(getIndexByString(spinnerRating, rating));
+
+        spinnerRating.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0: //G
+                        rating = "G";
+                        //test.setText(rating);
+                        break;
+                    case 1: //PG
+                        rating = "PG";
+                        //test.setText(rating);
+                        break;
+                    case 2: //PG13
+                        rating = "PG13";
+                        //test.setText(rating);
+                        break;
+                    case 3: //NC16
+                        rating = "NC16";
+                        //test.setText(rating);
+                        break;
+                    case 4: //M18
+                        rating = "M18";
+                        //test.setText(rating);
+                        break;
+                    case 5: //R21
+                        rating = "R21";
+                        //test.setText(rating);
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override

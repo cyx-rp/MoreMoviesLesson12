@@ -10,8 +10,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#80FFFFFF"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/movie_bg"
+        android:padding="40dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Movies"
+            android:textSize="34sp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:gravity="center"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,16 +33,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Movie Title" />
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:text="Movie Title"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/etTitle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Enter movie title here"
-                android:inputType="text" />
+                android:inputType="text"
+                android:fontFamily="@font/josefin_sans_semibold"/>
         </LinearLayout>
 
         <LinearLayout
@@ -45,16 +58,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Genre" />
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:text="Genre"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/etGenre"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Enter genre here"
-                android:inputType="text" />
+                android:inputType="text"
+                android:fontFamily="@font/josefin_sans"/>
         </LinearLayout>
 
         <LinearLayout
@@ -67,16 +83,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Year" />
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:text="Year"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/etYear"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Enter year of release here"
-                android:inputType="text" />
+                android:inputType="number"
+                android:hint="Enter a year"
+                android:fontFamily="@font/josefin_sans"/>
         </LinearLayout>
 
         <LinearLayout
@@ -88,12 +107,14 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rating" />
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:text="Rating"
+                android:textSize="20sp" />
 
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:entries="@array/spinnerItems" />
 
 <!--            <TextView
@@ -114,14 +135,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Insert" />
+                android:fontFamily="@font/josefin_sans"
+                android:text="Insert"
+                android:textSize="20sp"
+                android:background="@drawable/button_bg"/>
 
             <Button
                 android:id="@+id/btnShowList"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Show List" />
+                android:fontFamily="@font/josefin_sans"
+                android:text="Show List"
+                android:textSize="20sp"
+                android:background="@drawable/button_bg" />
         </LinearLayout>
 
         <ListView
